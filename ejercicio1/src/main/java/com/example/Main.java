@@ -1,3 +1,4 @@
+
 package com.example;
 
 public class Main {
@@ -10,8 +11,8 @@ public class Main {
         int horasExtras = 10;
         double auxilioTransporte = 162000;
         // Cálculo de la nómina
-        double salarioDevengado = calcularSalarioDevengado(salarioBase, horasTrabajo, horasExtras);
-        double deducciones = calcularDeducciones(salarioDevengado, auxilioTransporte);
+        double salarioDevengado = calcularSalarioDevengado(salarioBase, horasTrabajo, horasExtras, auxilioTransporte);
+        double deducciones = calcularDeducciones(auxilioTransporte);
         double salarioNeto = salarioDevengado - deducciones;
 
         // Impresión de la nómina
@@ -25,14 +26,16 @@ public class Main {
     }
 
     // Método para calcular el salario devengado
-    public static double calcularSalarioDevengado(int salarioBase, int horasTrabajo, int horasExtras) {
-        // Implementar solución
-        return 0;
+    public static double calcularSalarioDevengado(int salarioBase, int horasTrabajo, int horasExtras, double auxilioTransporte) {
+        double valorCadaHora = salarioBase / horasTrabajo;
+        double valorHorasExtra = valorCadaHora * horasExtras;
+        double salarioDevengado = salarioBase + valorHorasExtra + auxilioTransporte;
+
+        return salarioDevengado;
     }
 
     // Método para calcular las deducciones
-    public static double calcularDeducciones(double salarioDevengado, double auxilioTransporte) {
-        // Implementar solución
-        return 0;
+    public static double calcularDeducciones(double auxilioTransporte) {
+        return auxilioTransporte;
     }
 }

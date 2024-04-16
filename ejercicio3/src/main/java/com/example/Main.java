@@ -43,7 +43,7 @@ public class Main {
     }
 
     private static void calcularTriangulo(Scanner scanner) {
-       
+    
     }
 
     private static void calcularCuadrado(Scanner scanner) {

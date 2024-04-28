@@ -43,18 +43,41 @@ public class Main {
     }
 
     private static void calcularTriangulo(Scanner scanner) {
-    
+        System.out.println("Ingrese la base del triangulo:");
+        int baseTriangulo = scanner.nextInt();
+
+        System.out.println("Ingrese la altura del triangulo:");
+        int alturaTriangulo = scanner.nextInt();
+
+        double areaTriangulo = 1.0 / 2.0 * (baseTriangulo * alturaTriangulo);
+        System.out.println("El área del triángulo es: " + areaTriangulo);
     }
 
     private static void calcularCuadrado(Scanner scanner) {
-       
+        System.out.println("Ingrese el lado del cuadrado:");
+        int ladoCuadrado = scanner.nextInt();
+
+        double areaCuadrado = ladoCuadrado * ladoCuadrado;
+        System.out.println("El área del cuadrado es: " + areaCuadrado);
     }
 
     private static void calcularRectangulo(Scanner scanner) {
-        
+        System.out.println("Ingrese la base del rectángulo:");
+        int baseRectangulo = scanner.nextInt();
+
+        System.out.println("Ingrese la altura del rectángulo:");
+        int alturaRectangulo = scanner.nextInt();
+
+        int areaRectangulo = baseRectangulo * alturaRectangulo;
+        System.out.println("El área del rectángulo es: " + areaRectangulo);
+
     }
 
     private static void calcularCirculo(Scanner scanner) {
-       
+        System.out.println("Ingrese el radio del círculo:");
+        int radioCirculo = scanner.nextInt();
+
+        double areaCircilo = 3.14 * Math.pow(radioCirculo, 2);
+        System.out.println("El área del círculo es: " + areaCircilo);
     }
 }
